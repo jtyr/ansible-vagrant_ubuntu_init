@@ -1,0 +1,10 @@
+---
+
+# Expected path for the Python executable
+vagrant_ubuntu_init_path: /usr/bin/python
+
+# Python package name
+vagrant_ubuntu_init_pkg: python-minimal
+
+# Command to run to install Python
+vagrant_ubuntu_init_cmd: apt -y update && apt install -y {{ vagrant_ubuntu_init_pkg }}

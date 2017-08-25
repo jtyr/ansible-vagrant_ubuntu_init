@@ -1,0 +1,10 @@
+---
+
+- name: Install Python
+  raw: test -e {{ vagrant_ubuntu_init_path }} || ({{ vagrant_ubuntu_init_cmd }})
+  register: output
+  changed_when: output.stdout != ''
+
+- name: Read facts
+  setup:
+  tags: always
