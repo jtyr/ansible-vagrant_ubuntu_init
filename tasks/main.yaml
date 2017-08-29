@@ -2,8 +2,8 @@
 
 - name: Install Python
   raw: test -e {{ vagrant_ubuntu_init_path }} || ({{ vagrant_ubuntu_init_cmd }})
-  register: output
-  changed_when: output.stdout != ''
+  register: vagrant_ubuntu_init_python_results
+  changed_when: vagrant_ubuntu_init_python_results.stdout != ''
 
 - name: Read facts
   setup:
